@@ -1,13 +1,16 @@
 'use strict';
 
-import './Base';
-import '../client/Client';
+import Base from './Base';
+import Client from '../client/Client';
+
+interface InterfaceUser {
+
+}
 
 class User extends Base {
-    constructor(client: Client, data) {
+    constructor(client: Client, data: InterfaceUser) {
         super(client);
-        
     }
 }
 
-module.exports = User;
+export default User;

@@ -1,12 +1,13 @@
 'use strict';
 
-import '../client/Client';
+import Client from '../client/Client';
 
-class Base {
+abstract class Base {
     public client: Client;
+    
     constructor(client: Client) {
         this.client = client;
     }
 }
 
-module.exports = Base;
+export default Base;

@@ -1,9 +1,13 @@
 'use strict';
 
-import './User';
+import Client from '../client/Client';
+import User from './User';
 
 class Channel extends User {
+    constructor(client: Client, data) {
+        super(client, data);
 
+    }
 }
 
-module.exports = Channel;
+export default Channel;
