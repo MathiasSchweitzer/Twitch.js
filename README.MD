@@ -1,0 +1,1 @@
+Greatly inspired by Discord.js library

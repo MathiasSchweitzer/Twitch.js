@@ -1,12 +1,12 @@
 'use strict';
 
 import Client from '../client/Client';
-import { BadArgumentType, FunctionError, MissingArgument } from '../errors/errors';
+import { BadArgumentType, FunctionError, MissingArgument } from '../errors/TwitchAPIError';
 import { checkType } from '../util/functions';
 import Base from './Base';
 import Channel from './Channel';
 
-interface InterfaceAd {
+interface IAd {
     message: string;
     at: Date;
 }
@@ -24,7 +24,7 @@ class Ad extends Base {
     at: Date;
     channel: Channel;
 
-    constructor(client: Client, channel: Channel, length: number, retry_after: number, data: InterfaceAd, immediatePatch = true) {
+    constructor(client: Client, channel: Channel, length: number, retry_after: number, data: IAd, immediatePatch = true) {
         super(client);
         if(checkType(channel, [`Channel`], `Channel`, true)) {
             this.channel = channel;

@@ -1,8 +1,10 @@
 'use strict';
 
-class Client {
-    constructor() {
+import EventEmitter from "events";
 
+class Client extends EventEmitter{
+    constructor() {
+        super();
     }
 }
 
